@@ -38,6 +38,10 @@
     box-shadow: none;
 }
 
+#custom-search-input input::placeholder {
+  font-size: 17px;
+}
+
 #custom-search-input button{
     margin: 2px 0 0 0;
     background: none;

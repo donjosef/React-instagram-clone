@@ -6,7 +6,8 @@ import './App.css';
 
 class App extends Component {
   state = {
-    posts: posts
+    posts: posts,
+    filteredPosts: []
   }
 
   addNewCommentHandler = (user, newComment) => {
@@ -40,8 +41,18 @@ class App extends Component {
       this.setState({ posts })
   }
 
+  filterPostsHandler = (query) => {
+      this.setState({
+        filteredPosts: this.state.posts.filter(post => post.username.includes(query))
+      });
+  }
+
   render() {
-    let postContainers = this.state.posts.map(post => (
+    let posts = this.state.posts;
+    if(this.state.filteredPosts.length > 0) {
+      posts = this.state.filteredPosts;
+    }
+    let postContainers = posts.map(post => (
       <PostContainer
           key={post.username}
           post={post}
@@ -50,7 +61,7 @@ class App extends Component {
     ));
     return (
       <div className="App">
-        <SearchBar />
+        <SearchBar onFilterPosts={this.filterPostsHandler}/>
         {postContainers}
       </div>
     );
