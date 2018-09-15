@@ -3,6 +3,15 @@
    padding: 12px 12px 0 12px;
 }
 
+.Comment {
+  display: flex;
+  justify-content: space-between;
+  margin: 5px 0;
+}
+
+.Comment button {
+  align-self: flex-start;
+}
 .Add_Comment {
   border: none;
   border-top: 1px solid #ccc;

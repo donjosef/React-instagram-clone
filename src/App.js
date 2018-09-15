@@ -26,6 +26,20 @@ class App extends Component {
     }
   }
 
+  deleteCommentHandler = (user, commentIndex) => {
+    const posts = this.state.posts.map(post => {
+      if(post.username === user) {
+        return {
+          ...post,
+          comments: post.comments.filter((comment, i) => i !== commentIndex)
+        }
+      } else {
+        return post;
+      }
+    });
+    this.setState({ posts });
+  }
+
   incrementLikeHandler = (user) => {
       const posts = this.state.posts.map(post => {
         if(post.username === user) {
@@ -57,6 +71,7 @@ class App extends Component {
           key={post.username}
           post={post}
           onAddNewComment={this.addNewCommentHandler}
+          onDeleteComment={this.deleteCommentHandler}
           onIncrementLike={this.incrementLikeHandler}/>
     ));
     return (

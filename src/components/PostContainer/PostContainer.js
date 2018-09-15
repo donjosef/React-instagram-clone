@@ -15,6 +15,7 @@ const postContainer = props => {
               onIncrementLike={props.onIncrementLike}/>
           <CommentSection
               onAddNewComment={props.onAddNewComment}
+              onDeleteComment={props.onDeleteComment}
               username={props.post.username}
               comments={props.post.comments}/>
         </article>

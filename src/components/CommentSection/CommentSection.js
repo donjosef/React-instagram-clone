@@ -17,8 +17,9 @@ class CommentSection extends Component {
     render() {
       const {commentText} = this.state;
       const comments = this.props.comments.map((comment, idx) => (
-          <div key={comment.username + idx }>
+          <div className='Comment' key={comment.username + idx }>
             <p><strong>{comment.username}</strong> {comment.text}</p>
+            <button onClick={() => this.props.onDeleteComment(this.props.username, idx)}>Delete</button>
           </div>
       ));
 
