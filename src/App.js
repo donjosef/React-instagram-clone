@@ -22,12 +22,31 @@ class App extends Component {
         }
       });
       this.setState({ posts });
-    }    
+    }
+  }
+
+  incrementLikeHandler = (user) => {
+      const posts = this.state.posts.map(post => {
+        if(post.username === user) {
+          return {
+            ...post,
+            likes: Number(post.likes) + 1
+          }
+        } else {
+          return post
+        }
+      });
+
+      this.setState({ posts })
   }
 
   render() {
     let postContainers = this.state.posts.map(post => (
-      <PostContainer key={post.username} post={post} onAddNewComment={this.addNewCommentHandler}/>
+      <PostContainer
+          key={post.username}
+          post={post}
+          onAddNewComment={this.addNewCommentHandler}
+          onIncrementLike={this.incrementLikeHandler}/>
     ));
     return (
       <div className="App">

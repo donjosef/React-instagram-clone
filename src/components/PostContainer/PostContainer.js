@@ -11,9 +11,10 @@ const postContainer = props => {
               thumbnail={props.post.thumbnailUrl}
               image={props.post.imageUrl}
               likes={props.post.likes}
-              comments={props.post.comments} />
+              comments={props.post.comments}
+              onIncrementLike={props.onIncrementLike}/>
           <CommentSection
-              onAddNewComment={props.onAddNewComment} 
+              onAddNewComment={props.onAddNewComment}
               username={props.post.username}
               comments={props.post.comments}/>
         </article>
