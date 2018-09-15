@@ -1,0 +1,18 @@
+.Comment_Section {
+   text-align: left;
+   padding: 12px 12px 0 12px;
+}
+
+.Add_Comment {
+  border: none;
+  border-top: 1px solid #ccc;
+  padding: 10px 10px 10px 0;
+  display: block;
+  width: 100%;
+  outline: none;
+  font-size: 1.2em;
+}
+
+.Add_Comment:focus {
+  background: #f6f6f6;
+}

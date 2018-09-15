@@ -1,0 +1,46 @@
+import React, {Component} from 'react';
+import PropTypes from 'prop-types';
+
+import './CommentSection.css';
+
+class CommentSection extends Component {
+    state = {
+      commentText: '',
+    }
+
+    changeCommentHandler = (e) => {
+      this.setState({
+        commentText: e.target.value
+      })
+    }
+
+    render() {
+      const {commentText} = this.state;
+      const comments = this.props.comments.map((comment, idx) => (
+          <div key={comment.username + idx }>
+            <p><strong>{comment.username}</strong> {comment.text}</p>
+          </div>
+      ));
+
+       return (
+         <section className='Comment_Section'>
+           {comments}
+           <input
+              className='Add_Comment'
+              value={this.state.commentText}
+              onChange={this.changeCommentHandler}
+              placeholder='Add a comment'/>
+           <button
+              onClick={() => this.props.onAddNewComment(this.props.username, {username:'Jos', text: commentText})}
+              >Add Comment
+          </button>
+         </section>
+       )
+    }
+}
+
+CommentSection.propTypes = {
+  comments: PropTypes.array.isRequired
+};
+
+export default CommentSection;

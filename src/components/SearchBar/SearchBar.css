@@ -1,0 +1,59 @@
+.Search {
+  padding: 40px 20px;
+  border-bottom: 3px solid #f1f1f1;
+  width: 95%;
+  margin: auto;
+  position: relative;
+}
+
+.Icons_Container {
+  width: 230px;
+  height: 50px;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.Icons_Container a {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2.4em;
+  color: black;
+}
+
+.fa-instagram {
+  font-size: 50px;
+}
+#custom-search-input{
+    padding: 3px;
+    border: solid 1px #E4E4E4;
+    border-radius: 6px;
+    background-color: #fff;
+    width: 200px;
+    margin: auto;
+}
+
+#custom-search-input input{
+    border: 0;
+    box-shadow: none;
+}
+
+#custom-search-input button{
+    margin: 2px 0 0 0;
+    background: none;
+    box-shadow: none;
+    border: 0;
+    color: #666666;
+    padding: 0 8px 0 10px;
+    border-left: solid 1px #ccc;
+}
+
+#custom-search-input button:hover{
+    border: 0;
+    box-shadow: none;
+    border-left: solid 1px #ccc;
+}
+
+#custom-search-input .glyphicon-search{
+    font-size: 23px;
+}
