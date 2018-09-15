@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import posts from './dummy-data'
 import SearchBar from './components/SearchBar/SearchBar'
 import PostContainer from './components/PostContainer/PostContainer'
+import authentication from './hoc/Authentication/Authentication'
 import './App.css';
 
 class App extends Component {
@@ -83,4 +84,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default authentication(App);
