@@ -27,6 +27,15 @@
   display: block;
 }
 
+.fa-heart {
+  font-size: 24px;
+  padding: 12px;
+  cursor: pointer;
+}
+
+.fa-heart:active {
+  color: red;
+}
 .Likes {
   padding-left: 12px;
 }

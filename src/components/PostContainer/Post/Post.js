@@ -11,6 +11,7 @@ const post = props => {
           <p><strong>{props.username}</strong></p>
         </header>
         <img src={props.image} alt='post img'/>
+        <i class="far fa-heart"></i>
         <p className='Likes'><strong>{props.likes} likes</strong></p>
       </Aux>
     )
