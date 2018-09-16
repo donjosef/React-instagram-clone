@@ -62,6 +62,7 @@ class App extends Component {
       });
   }
 
+
   render() {
     let posts = this.state.posts;
     if(this.state.filteredPosts.length > 0) {
