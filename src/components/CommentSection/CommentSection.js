@@ -26,15 +26,18 @@ class CommentSection extends Component {
        return (
          <section className='Comment_Section'>
            {comments}
-           <input
-              className='Add_Comment'
-              value={this.state.commentText}
-              onChange={this.changeCommentHandler}
-              placeholder='Add a comment'/>
-           <button
-              onClick={() => this.props.onAddNewComment(this.props.username, {username:'Jos', text: commentText})}
-              >Add Comment
-          </button>
+           <div className='AddComment_Section'>
+               <input
+                   className='Add_Comment'
+                   value={this.state.commentText}
+                   onChange={this.changeCommentHandler}
+                   placeholder='Add a comment'/>
+               <button
+                   className='Add_Btn'
+                   onClick={() => this.props.onAddNewComment(this.props.username, {username:'Jos', text: commentText})}
+               >Add Comment
+               </button>
+            </div>
          </section>
        )
     }

@@ -11,17 +11,38 @@
 
 .Comment button {
   align-self: flex-start;
+  background-color: white;
+  border: 1px solid #aaa;
+  border-radius: 20px;
+  padding: 0 8px;
+}
+
+.AddComment_Section {
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
 }
 .Add_Comment {
   border: none;
-  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
   padding: 10px 10px 10px 0;
   display: block;
-  width: 100%;
+  width: 70%;
   outline: none;
   font-size: 1.2em;
+  align-self: center;
 }
 
 .Add_Comment:focus {
   background: #f6f6f6;
+}
+
+.Add_Btn {
+  background-color: #3897F0;
+  padding: 5px 8px;
+  color: white;
+  border-radius: 20px;
+  border: none;
+  align-self: center;
+  width: 25%;
 }
