@@ -18,13 +18,29 @@ class Login extends Component {
         password: e.target.value
       })
     }
+
+    loginHandler = () => {
+      localStorage.setItem('username', this.state.user);
+    }
+
     render() {
       return (
-        <form className='LoginForm'>
-          <input value={this.state.user} onChange={this.changeUserHandler} placeholder='Username'/>
-          <input value={this.state.password} onChange={this.changePasswordHandler} placeholder='Password'/>
-          <button>Login</button>
-        </form>
+        <div className='LoginForm'>
+            <h2>Instagram Clone</h2>
+            <form onSubmit={this.loginHandler}>
+              <input
+                  value={this.state.user}
+                  onChange={this.changeUserHandler}
+                  placeholder='Username'/>
+              <input
+                  type='password'
+                  value={this.state.password}
+                  onChange={this.changePasswordHandler}
+                  placeholder='Password'/>
+              <button>Login</button>
+            </form>
+            <p>This is a fake login form.<br /> Enter a random username and password</p>
+        </div>
       )
     }
 }

@@ -4,8 +4,22 @@
   width: 400px;
   padding: 20px;
   margin: 100px auto;
+  box-shadow: 0 2px 4px 2px #aaa;
+
+}
+.LoginForm h2 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2.4em;
+  color: black;
+  text-align: center;
 }
 
+.LoginForm p {
+  color: black;
+  text-align: center;
+  margin-top: 10px;
+  color: #94adb5;
+}
 .LoginForm input {
   padding: 10px;
   border: 2px solid #4EB8DD;
