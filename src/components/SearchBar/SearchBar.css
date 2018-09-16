@@ -62,6 +62,17 @@
     font-size: 23px;
 }
 
+.Logout {
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: block;
+  padding: 15px;
+  color: #111;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
 @media (max-width: 796px) {
   .Icons_Container {
     width: 100%;
@@ -74,4 +85,13 @@
    .Icons_Container .fa-instagram {
     padding: 0 10px;
   }
+}
+
+
+@media (max-width: 550px) {
+  .Icons_Container {
+    margin-top: 30px;
+  }
+
+
 }

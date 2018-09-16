@@ -10,7 +10,7 @@ class SearchBar extends Component {
       query: e.target.value
     }, () => this.props.onFilterPosts(this.state.query))
   }
-  
+
   render() {
     return (
       <header className='Search'>
@@ -27,6 +27,7 @@ class SearchBar extends Component {
                   placeholder="Search by User..." />
              </div>
            </div>
+           <a className='Logout' href='/'>Logout</a>
       </header>
     );
   }
