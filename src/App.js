@@ -46,7 +46,7 @@ class App extends Component {
         if(post.username === user) {
           return {
             ...post,
-            likes: Number(post.likes) + 1
+            likes: post.likes + 1
           }
         } else {
           return post
