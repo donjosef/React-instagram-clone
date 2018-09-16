@@ -61,3 +61,17 @@
 #custom-search-input .glyphicon-search{
     font-size: 23px;
 }
+
+@media (max-width: 796px) {
+  .Icons_Container {
+    width: 100%;
+    display: block;
+    position: static;
+    margin-bottom: 30px;
+  }
+
+   .Icons_Container a,
+   .Icons_Container .fa-instagram {
+    padding: 0 10px;
+  }
+}

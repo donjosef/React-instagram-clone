@@ -46,3 +46,9 @@
   text-transform: uppercase;
   font-size: 0.9em;
 }
+
+@media (max-width: 550px) {
+  .Post {
+    width: 95%;
+  }
+}
