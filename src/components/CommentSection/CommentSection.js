@@ -34,7 +34,7 @@ class CommentSection extends Component {
                    placeholder='Add a comment'/>
                <button
                    className='Add_Btn'
-                   onClick={() => this.props.onAddNewComment(this.props.username, {username:'Jos', text: commentText})}
+                   onClick={() => this.props.onAddNewComment(this.props.username, {username: localStorage.getItem('username'), text: commentText})}
                >Add Comment
                </button>
             </div>
