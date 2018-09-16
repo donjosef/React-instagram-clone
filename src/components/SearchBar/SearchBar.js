@@ -11,6 +11,10 @@ class SearchBar extends Component {
     }, () => this.props.onFilterPosts(this.state.query))
   }
 
+  logoutHandler = () => {
+    localStorage.removeItem('username');
+  }
+
   render() {
     return (
       <header className='Search'>
@@ -27,7 +31,7 @@ class SearchBar extends Component {
                   placeholder="Search by User..." />
              </div>
            </div>
-           <a className='Logout' href='/'>Logout</a>
+           <a className='Logout' href='/' onClick={this.logoutHandler}>Logout</a>
       </header>
     );
   }
